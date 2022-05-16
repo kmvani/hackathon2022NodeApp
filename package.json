@@ -1,5 +1,5 @@
 {
-    "name": "phoneticsnodeapp",
+    "name": "phoneticweb",
     "version": "1.0.0",
     "description": "JavaScript server written with Express.js",
     "main": "index.js",
