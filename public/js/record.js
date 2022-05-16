@@ -153,7 +153,7 @@ function fetchRecordings() {
 function saveRecording() {
     const formData = new FormData();
     phrase = document.getElementById('phraseDiv').value.trim();
-    formData.append('audio', audioBlob, phrase);
+    formData.append('audio', audioBlob, phrase + '.mp3');
     fetch('/record', {
             method: 'POST',
             body: formData,
