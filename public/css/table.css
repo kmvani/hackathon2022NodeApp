@@ -65,32 +65,13 @@ audio {
 }
 
 table {
-    width: 800px;
+    width: 500px;
     border: 1px solid black;
     background: #9db7de;
     border-collapse: collapse;
 }
 
 
-/*
-
-tr,
-td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-td {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-th {
-    font-size: 12px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}*/
 
 table {
     border-collapse: collapse;
@@ -101,6 +82,7 @@ th {
     padding: 5px;
     border: 0px solid black;
     vertical-align: top;
+    font-size: 8px;
 }
 
 td {
