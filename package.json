@@ -16,12 +16,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "git@github.com:michaelcheng103/hackathon2022-phonetics-nodejs.git"
+        "url": "https://github.com/kmvani/hackathon2022NodeApp.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "homepage": "https://github.com/michaelcheng103/hackathon2022-phonetics-nodejs/blob/main/README.md",
     "devDependencies": {
         "eslint": "^7.9.0",
         "eslint-config-airbnb": "^18.2.0",
