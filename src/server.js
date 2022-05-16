@@ -89,14 +89,15 @@ const create = async() => {
 
     app.post('/record', upload.single('audio'), async(req, res) => {
         console.log("upload to container =", container);
-
-        var buffer = fs.readFileSync(req.file.path + ".mp3");
-        //  console.log("req.file =", req.file);
-        const blobName = req.file.originalname + ".mp3";
+        var name = req.file.originalname;
+        name = name.slice(0, -4);
+        console.log("name =", name);
+        var buffer = fs.readFileSync(req.file.path);
+        const blobName = req.file.originalname;
         const stream = getStream(buffer);
         const containerClient = blobServiceClient.getContainerClient(container);;
         const blockBlobClient = containerClient.getBlockBlobClient(blobName);
-        db.insert(req.file.originalname, "").then((result) => {
+        db.insert(name, "").then((result) => {
             blockBlobClient.uploadStream(stream,
                 uploadOptions.bufferSize, uploadOptions.maxBuffers, { blobHTTPHeaders: { blobContentType: "audio/mpeg" } }).then(res => {
 
