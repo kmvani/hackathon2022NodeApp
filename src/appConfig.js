@@ -1,5 +1,5 @@
 var PropertiesReader = require('properties-reader');
-const path = require("path").resolve(`application.properties`);
+const path = require("path").resolve('application.properties');
 console.log(path);
 var properties = PropertiesReader(path);
 
