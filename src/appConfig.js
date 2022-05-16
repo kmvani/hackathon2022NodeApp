@@ -3,19 +3,20 @@ const path = require("path").resolve('application.properties');
 console.log(path);
 var properties = PropertiesReader(path);
 
-resourceKey = properties.get("azure.resourceKey");
-region = properties.get("azure.region");
-storageAccountAccessKey = properties.get("azure.storageAccountAccessKey");
-storageAccountName = properties.get("azure.storageAccountName");
-storageContainer = properties.get("azure.storageAccountContainer");
+let resourceKey = properties.get("azure.resourceKey");
+let region = properties.get("azure.region");
+let storageAccountAccessKey = properties.get("azure.storageAccountAccessKey");
+let storageAccountName = properties.get("azure.storageAccountName");
+let storageContainer = properties.get("azure.storageAccountContainer");
 
 
-db_host = properties.get("db.host");
-db_port = properties.get("db.port");
-db_database = properties.get("db.database");
-db_user = properties.get("db.user");
-db_password = properties.get("db.password");
-db_certification = properties.get("db.certification.path");
+let db_host = properties.get("db.host");
+let db_port = properties.get("db.port");
+let db_database = properties.get("db.database");
+let db_user = properties.get("db.user");
+let db_password = properties.get("db.password");
+let db_certification = properties.get("db.certification.path");
+console.log("dbhost =>", db_host);
 
 var config = {
     RESOURCE_KEY: resourceKey,
