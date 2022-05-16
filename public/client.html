@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name Pronounciation App</title>
+    <title>Phonetics Pronounciation Me Application</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="/css/index.css" rel="stylesheet" />
     <link href="/css/table.css" rel="stylesheet" />
@@ -17,7 +17,7 @@
 </style>
 
 <body oncontextmenu="return false" onload="javascript:getAllText()">
-    <h3 style="font-weight:400;background:#33a6e4;color:white;font-family: Georgia;">&nbsp;&nbsp;&nbsp;Phonetics Application </h3>
+    <h3 style="text-align: left;font-weight:400;background:#33a6e4;color:white;font-family: Georgia;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Phonetics Name Pronounce App </h3>
     <div class="main" align="left">
         <table align="left" width="75%" border="0">
 
@@ -25,14 +25,14 @@
                 <td colspan="3">&nbsp;</td>
             </tr>
             <tr>
-                <th>List Employee Name(s): </th>
+                <th> Employee Name(s): </th>
                 <td>
                     <select name="audiofiles" id="audiofiles" style="width:320px;height:150px;" multiple>
                              <!--<option  value="" style="width:200px;" selected></option>-->
                     </select>
                 </td>
                 <td>
-                    <img class="img__img" src="./images/play-icon.png" id="playimg" width="40" height="40" onclick="javascript:play()" />
+                    <img class="img__img" src="./images/play-icon.png" id="playimg" width="35" height="35" onclick="javascript:play()" />&nbsp;&nbsp;&nbsp;&nbsp;
                     <button class="classbutton" onclick="javascript:window.location.reload()" id="getAllText">Get All </button>
                     <button id="downloadfile" class="classbutton" onclick="javascript:godownload()" style="background:#085591;color:white;">Download</button>
                     <button class="classbutton" onclick="javascript:deleteUser()" id="deleteText">Delete </button>
@@ -51,7 +51,7 @@
             </tr>
             <tr>
                 <th>Pronounce me:</th>
-                <td colspan="2" align="left" style="vertical-align: top;">
+                <td colspan="2" align="left" style=" vertical-align: top;">
                     <div class="recorded-audio-container  d-none   vertical-align: top;" id="recordedAudioContainer">
                         &nbsp;&nbsp;<button height="25px" width="80px" style="font-family: Georgia;font-size: 10px;background:#085591;color:white;" class="btn btn-success " id="saveButton">Save</button> &nbsp;&nbsp;
                         <!---<button class="btn btn-danger rounded-pill" id="discardButton">Discard</button>-->
