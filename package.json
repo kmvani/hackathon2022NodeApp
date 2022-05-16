@@ -3,10 +3,6 @@
     "version": "1.0.0",
     "description": "JavaScript server written with Express.js",
     "main": "index.js",
-    "directories": {
-        "doc": "docs",
-        "test": "test"
-    },
     "scripts": {
         "build": "npm install",
         "start": "node src/index.js"
