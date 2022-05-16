@@ -8,18 +8,15 @@
         "test": "test"
     },
     "scripts": {
-        "build": "npm run lint",
-        "start": "node src/index.js",
-        "start:dev": "npm run lint && nodemon --exec node src/index.js --unhandled-rejections=warn",
-        "test": "jest --detectOpenHandles --coverage",
-        "lint": "eslint src/**/*.js --fix"
+        "build": "npm install",
+        "start": "node src/index.js"
     },
     "repository": {
         "type": "git",
         "url": "https://github.com/kmvani/hackathon2022NodeApp.git"
     },
     "keywords": [],
-    "author": "",
+    "author": "Phonetics Team-Mehervani",
     "license": "ISC",
     "devDependencies": {
         "eslint": "^7.9.0",
