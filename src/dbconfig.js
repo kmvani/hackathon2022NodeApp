@@ -7,18 +7,7 @@ const config = require('./appConfig');
 const { sql } = require('@databases/pg');
 const { Pool } = require('pg');
 
-const config_old = {
-    host: 'us-east-1.cf97a208-b831-4a6a-a877-0d43dbc1837b.aws.ybdb.io',
-    port: '5433',
-    database: 'yugabyte',
-    user: 'admin',
-    password: 'Welcome2yugabyte',
-    ssl: {
-        rejectUnauthorized: true,
-        ca: fs.readFileSync('C:/vani/root.crt').toString()
-    },
 
-};
 
 const dbconfig = {
     host: config.db_host,
@@ -60,8 +49,8 @@ exports.disconnect = function() {
 exports.insert = (name, data) => {
 
     return new Promise((resolve, reject) => {
-        stmt = `INSERT INTO users (name,content) VALUES
-            ('` + name + `','` + data + `')`;
+        stmt = `INSERT INTO users (name) VALUES
+            ('` + name + `')`;
         client.query(stmt).then(resp => {
             console.log('>>>> Successfully inserted users audio.');
             resolve(resp);
