@@ -19,8 +19,6 @@ const multer = require('multer');
 var fs = require('fs');
 const getStream = require('into-stream');
 const inMemoryStorage = multer.memoryStorage();
-//const uploadStrategy = multer({ storage: inMemoryStorage }).single('audio');
-const { AZURE_STORAGE_CONTAINER } = require('./appConfig');
 const ONE_MEGABYTE = 1024 * 1024;
 const uploadOptions = { bufferSize: 4 * ONE_MEGABYTE, maxBuffers: 20 };
 const ONE_MINUTE = 60 * 1000;
@@ -196,7 +194,7 @@ const create = async() => {
     app.get('/play', async(req, res, next) => {
         const { phrase } = req.query;
         if (!key || !region || !phrase) res.status(404).send('Invalid query string');
-        const audiofileUrl = `https://${storageName}.blob.core.windows.net/${AZURE_STORAGE_CONTAINER}/${phrase}.mp3`;
+        const audiofileUrl = `https://${storageName}.blob.core.windows.net/${container}/${phrase}.mp3`;
         console.log("play..");
         res.status(200).send({ 'fileurl': audiofileUrl });
 
